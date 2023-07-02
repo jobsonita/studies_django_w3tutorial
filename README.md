@@ -115,6 +115,32 @@ It will create a `manage.py` file on the root of the repository and a `my_tennis
 > - urls.py
 > - wsgi.py
 
+## Creating an App
+
+An app is a web application. In this project, it'll be a tennis club member management system.
+
+We create new apps by running the command below:
+
+> ./manage.py startapp <app_name>
+
+In our case, the `<app_name>` will be `members`:
+
+```bash (venv)
+./manage.py startapp members
+```
+
+It will create a `members` folder with the following structure:
+
+> members
+> - migrations
+>   - \_\_init\_\_.py
+> - \_\_init\_\_.py
+> - admin.py
+> - apps.py
+> - models.py
+> - tests.py
+> - views.py
+
 ## Sharing current project with other developers
 
 At any moment, run the following command to generate a list of requirements to be installed:
@@ -134,7 +160,7 @@ pip install -r requirements.txt
 If the project has any migrations, make sure to run them to restore the database:
 
 ```bash (venv)
-python manage.py migrate
+./manage.py migrate
 ```
 
 ## Running the project
