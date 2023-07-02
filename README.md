@@ -29,3 +29,15 @@ Layout of the web page with logic on how to display the data.
 Decides which view will handle a request to a specific URL.
 
 > `urls.py`
+
+## Checking Python installation
+
+Run the following commands on the terminal to see whether Python and PIP are installed:
+
+```bash
+python --version
+```
+
+```bash
+pip --version
+```
