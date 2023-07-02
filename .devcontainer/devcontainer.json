@@ -18,6 +18,10 @@
   "customizations": {
     "vscode": {
       "settings": {
+        "editor.codeActionsOnSave": [
+          "source.organizeImports",
+          "source.fixAll"
+        ],
         "editor.minimap.enabled": false,
         "editor.renderLineHighlight": "gutter",
         "emmet.includeLanguages": { "django-html": "html" },
@@ -41,7 +45,7 @@
         "[python]": {
           "editor.rulers": [79],
           "editor.tabSize": 4,
-          "editor.defaultFormatter": "ms-python.black-formatter",
+          "editor.defaultFormatter": "ms-python.python",
           "editor.formatOnSave": true
         },
         "[django-html]": {
@@ -59,7 +63,6 @@
         "ms-python.python",
         "ms-python.vscode-pylance",
         "KevinRose.vsc-python-indent",
-        "ms-python.black-formatter",
         "batisteo.vscode-django",
         "bigonesystems.django",
         "junstyle.vscode-django-support",
