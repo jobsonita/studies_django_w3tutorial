@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <body>
-    {% with firstname="Tobias" %}
+    {% with firstname='Tobias' %}
       <h1>Hello {{ firstname }}, how are you?</h1>
     {% endwith %}
 
@@ -9,9 +9,19 @@
       <h2>{{ x }}</h2>
     {% endfor %}
 
-    {% for x in mymembers %}
-      <li>{{ x.firstname }}</li>
-    {% endfor %}
+    <ul>
+      {% for x in mymembers reversed %}
+        <li>{{ x.firstname }}</li>
+      {% endfor %}
+    </ul>
+
+    <ul>
+      {% for x in emptytestobject %}
+        <li>{{ x.firstname }}</li>
+      {% empty %}
+        <li>No members</li>
+      {% endfor %}
+    </ul>
 
     <p>In views.py you can see what the fruits variable looks like.</p>
   </body>

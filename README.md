@@ -333,15 +333,39 @@ Example: [members/templates/all_members.html](https://github.com/jobsonita/studi
 {% endwith %}
 ```
 
-### for loop
+> **Important**: there must not be any spaces between the variable, the assignment and the value.
+
+### for loop and empty
 
 ```django
 {% for item in a_list_of_items %}
   <p id="paragraph{{ item.id }}">{{ item.field }}</p>
+{% empty %}
+  <p>No items.</p>
 {% endfor %}
 ```
 
 Example: [members/templates/all_members.html](https://github.com/jobsonita/studies_django_w3tutorial/blob/df7c73961e899aff3aec3418ed8da6c880063a7c/members/templates/all_members.html)
+
+Loop variables:
+
+> - forloop.counter
+> - forloop.counter0
+> - forloop.first
+> - forloop.last
+> - forloop.parentloop
+> - forloop.revcounter
+> - forloop.revcounter0
+
+```django
+{% for item in a_list_of_items reversed %}
+  <li
+    {% if forloop.first %}
+      style="background-color:lightblue;"
+    {% endif %}
+  >{{ forloop.couter }}</li>
+{% endfor %}
+```
 
 ### if elif else
 
