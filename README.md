@@ -209,10 +209,16 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-If the project has any migrations, make sure to run them to restore the database:
+If the project has any migrations, make sure to run them to prepare the database:
 
 ```bash (venv)
 ./manage.py migrate
+```
+
+If you need to fill the database with data from this tutorial, use the following command:
+
+```bash (venv)
+./manage.py loaddata members/fixtures/members.json --app members
 ```
 
 ## Running the project

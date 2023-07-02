@@ -11,6 +11,12 @@ setup:
 	python manage.py migrate
 	python manage.py createsuperuser
 
+dump:
+	python manage.py dumpdata members -o members/fixtures/members.json
+
+load:
+	python manage.py loaddata members/fixtures/members.json --app members
+
 serve:
 	python manage.py migrate
 	python manage.py runserver
