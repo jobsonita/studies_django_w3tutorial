@@ -141,6 +141,24 @@ It will create a `members` folder with the following structure:
 > - tests.py
 > - views.py
 
+## Creating migrations for new or modified models:
+
+Whenever we change the `models.py` file of an app to include new models or change old ones, we must create migrations to tell the database to comply to those changes. We do that by running the following command:
+
+> ./manage.py makemigrations <app_name> --name <migration_name>
+
+In our case, we're changing a model in the `members` app, and we're fine with the auto generated name (`initial` for the first migration, `auto` for the later ones), so we can ignore the `--name` argument and just run:
+
+```bash (venv)
+./manage.py makemigrations members
+```
+
+Finally, we apply our migrations through:
+
+```bash (venv)
+./manage.py migrate
+```
+
 ## Sharing current project with other developers
 
 At any moment, run the following command to generate a list of requirements to be installed:
