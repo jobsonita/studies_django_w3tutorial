@@ -259,6 +259,47 @@ To run the project, use the following command:
 ./manage.py runserver
 ```
 
+## Django Template Tags
+
+### context
+
+```python
+from django.http import HttpResponse
+from django.template import loader
+
+
+def members(request):
+    template = loader.get_template('all_members.html')
+    context = {
+        "variable_to_be_displayed": "Hello World!",
+        "a_list_of_items": [
+            {"id": 1, "field": "value 1"},
+            {"id": 2, "field": "value 2"},
+        ],
+    }
+    return HttpResponse(template.render(context, request))
+```
+
+Example: [members/views.py](members/views.py)
+
+### data display
+
+```django
+<p>{{ variable_to_be_displayed }}</p>
+```
+
+Example: [members/templates/all_members.html](members/templates/all_members.html)
+
+### for loop
+
+```django
+{% for item in a_list_of_items %}
+  <p id="paragraph{{ item.id }}">{{ item.field }}</p>
+{% endfor %}
+```
+
+Example: [members/templates/all_members.html](members/templates/all_members.html)
+
 ## Common problems
 
 When opening a Python file, you might notice Pylance complains about not being able to resolve imports. This is due to VSCode automatically picking the system's Python installation instead of the `venv` one. This must be fixed on each machine individually, since the venv structure varies with the OS.
