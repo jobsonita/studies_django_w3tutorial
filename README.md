@@ -259,9 +259,44 @@ To run the project, use the following command:
 ./manage.py runserver
 ```
 
+## Django Url Patterns
+
+### URL Params
+
+To catch a parameter from the url, we use the notation:
+
+> `<type:name>`
+
+where `type` could be [`int`, `str`, `uuid`, `slug` and `path`](https://docs.djangoproject.com/en/4.2/topics/http/urls/#path-converters), or other more advanced matchers, and `name` is the name of the variable that will be passed on to the view.
+
+```python
+# urls.py
+from django.urls import path
+
+from . import views
+
+urlpatterns = [
+    path('app/users/<int:id>', views.user_details, name='user_details'),
+]
+
+# views.py
+from django.http import HttpResponse
+from django.template import loader
+from .models import User
+
+
+def user_details(request, id):
+    user = User.objects.get(id=id)
+    template = loader.get_template('user_details.html')
+    context = {
+        'user': user,
+    }
+    return HttpResponse(template.render(context, request))
+```
+
 ## Django Template Tags
 
-### context
+### Context
 
 ```python
 from django.http import HttpResponse
