@@ -406,6 +406,29 @@ We can have a parent template with the general structure of the page, and childr
 {% endblock %}
 ```
 
+### include
+
+```django
+<!-- nav.html -->
+<div>HOME | {{ me }} | ABOUT | FORUM | {{ sponsor }}</div>
+
+<!-- footer.html -->
+<p>You have reached the bottom of this page.</p>
+
+<!-- page.html -->
+<!DOCTYPE html>
+<html>
+<body>
+  {% include "nav.html" with me="TOBIAS" sponsor="W3SCHOOLS" %}
+  
+  <h1>Hello</h1>
+  <p>This page contains a nav and a footer templates.</p>
+
+  {% include 'footer.html' %}
+</body>
+</html>
+```
+
 ### Comments
 
 ```django
