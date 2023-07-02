@@ -15,7 +15,7 @@ W3Schools Django Tutorial: https://www.w3schools.com/django/
 Data from the database. Delivered as an Object Relational Mapping (ORM).
 
 > `models.py`  
-> Example: [`members/models.py`](https://github.com/jobsonita/studies_django_w3tutorial/blob/376a1ad3f0b43a8a7f74f12916ea8d29203dcc19/members/models.py)
+> Example: [`members/models.py`](https://github.com/jobsonita/studies_django_w3tutorial/blob/fda1b2dd75832d5979580d561541936885079b64/members/models.py)
 
 ### View
 
@@ -46,7 +46,8 @@ Define how the database is built to match our models.
 
 > `**/migrations/**/*.py`  
 > Examples:  
->> [`members/migrations/0001_initial.py`](members/migrations/0001_initial.py)
+>> [`members/migrations/0001_initial.py`](members/migrations/0001_initial.py)  
+>> [`members/migrations/0002_member_joined_date_member_phone.py`](members/migrations/0002_member_joined_date_member_phone.py)
 
 ### Settings
 
@@ -170,7 +171,7 @@ Whenever we change the `models.py` file of an app to include new models or chang
 
 > ./manage.py makemigrations <app_name> --name <migration_name>
 
-In our case, we're changing a model in the `members` app, and we're fine with the auto generated name (`initial` for the first migration, `auto` for the later ones), so we can ignore the `--name` argument and just run:
+In our case, we're changing a model in the `members` app, and we're fine with the auto generated name (`initial` for the first migration), so we can ignore the `--name` argument and just run:
 
 ```bash (venv)
 ./manage.py makemigrations members
