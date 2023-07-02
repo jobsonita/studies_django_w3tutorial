@@ -193,6 +193,14 @@ This way, we can restore the database on a new machine by running:
 ./manage.py loaddata members/fixtures/members.json --app members
 ```
 
+We can delete a record through the interactive shell like so:
+
+```python shell
+from members.models import Member
+member = Member.objects.all()[5]
+member.delete()
+```
+
 ## Sharing current project with other developers
 
 At any moment, run the following command to generate a list of requirements to be installed:
