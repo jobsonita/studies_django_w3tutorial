@@ -386,8 +386,19 @@ In order to access our models in Django Admin interface, we need to register the
 from django.contrib import admin
 from .models import Member
 
-# Register your models here.
 admin.site.register(Member)
+```
+
+We can also configure which fields are displayed in the list view:
+
+```python
+from django.contrib import admin
+from .models import Member
+
+class MemberAdmin(admin.ModelAdmin):
+  list_display = ("firstname", "lastname", "joined_date",)
+
+admin.site.register(Member, MemberAdmin)
 ```
 
 ## Common problems
