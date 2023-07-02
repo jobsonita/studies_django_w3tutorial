@@ -368,6 +368,16 @@ We can have a parent template with the general structure of the page, and childr
 
 As long as there is a template file named `404.html` inside an app, it will be used whenever a 404 error occurs.
 
+## Django Admin
+
+### Superuser
+
+To create the superuser in order to access Django Admin interface (`/admin` endpoint), we run:
+
+```bash (venv)
+./manage.py createsuperuser
+```
+
 ## Common problems
 
 When opening a Python file, you might notice Pylance complains about not being able to resolve imports. This is due to VSCode automatically picking the system's Python installation instead of the `venv` one. This must be fixed on each machine individually, since the venv structure varies with the OS.
