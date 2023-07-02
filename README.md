@@ -362,6 +362,12 @@ We can have a parent template with the general structure of the page, and childr
 {% endblock %}
 ```
 
+## Special Pages
+
+### 404 - Not Found
+
+As long as there is a template file named `404.html` inside an app, it will be used whenever a 404 error occurs.
+
 ## Common problems
 
 When opening a Python file, you might notice Pylance complains about not being able to resolve imports. This is due to VSCode automatically picking the system's Python installation instead of the `venv` one. This must be fixed on each machine individually, since the venv structure varies with the OS.
