@@ -406,6 +406,18 @@ We can have a parent template with the general structure of the page, and childr
 {% endblock %}
 ```
 
+### Comments
+
+```django
+{% comment %}
+  <h1>This element will be ignored</h1>
+{% endcomment %}
+{% comment "with a description for documentation" %}
+  <h2>This element will also be ignored</h2>
+{% endcomment %}
+<h1>Welcome{# Everyone #}</h1>
+```
+
 ## Special Pages
 
 ### 404 - Not Found
