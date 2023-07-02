@@ -2,7 +2,9 @@
 
 W3Schools Django Tutorial: https://www.w3schools.com/django/
 
-Note: all commmands bellow assume a Unix machine. For Windows or Mac, the commands might differ.
+> Note: all commmands bellow assume a Unix machine. For Windows or Mac, the commands might differ.
+
+> Note: `django-admin` and `manage.py` can be used interchangeably in projects with a single app, but `django-admin` is preferred when working with multiple apps in the same project.
 
 ## Django structure:
 
