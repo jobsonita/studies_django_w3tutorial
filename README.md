@@ -14,25 +14,46 @@ W3Schools Django Tutorial: https://www.w3schools.com/django/
 
 Data from the database. Delivered as an Object Relational Mapping (ORM).
 
-> `models.py`
+> `models.py`  
+> Example: [`members/models.py`](https://github.com/jobsonita/studies_django_w3tutorial/blob/376a1ad3f0b43a8a7f74f12916ea8d29203dcc19/members/models.py)
 
 ### View
 
 Request handler. Returns the relevant template and content.
 
-> `views.py`
+> `views.py`  
+> Example: [`members/views.py`](https://github.com/jobsonita/studies_django_w3tutorial/blob/c6e79a9ab13056a7ba9a340090b472d8509a6e63/members/views.py)
 
 ### Template
 
 Layout of the web page with logic on how to display the data.
 
-> `**/templates/**/*.html`
+> `**/templates/**/*.html`  
+> Example: [`members/templates/myfirst.html`](https://github.com/jobsonita/studies_django_w3tutorial/blob/c6e79a9ab13056a7ba9a340090b472d8509a6e63/members/templates/myfirst.html)
 
 ### URLs
 
 Decides which view will handle a request to a specific URL.
 
-> `urls.py`
+> `urls.py`  
+> Examples:  
+>> [`my_tennis_club/urls.py`](https://github.com/jobsonita/studies_django_w3tutorial/blob/4f1b08fd7e77fa8295ae42eec9fd77089a6d3417/my_tennis_club/urls.py)  
+>> [`members/urls.py`](https://github.com/jobsonita/studies_django_w3tutorial/blob/4f1b08fd7e77fa8295ae42eec9fd77089a6d3417/members/urls.py)
+
+### Migrations
+
+Define how the database is built to match our models.
+
+> `**/migrations/**/*.py`  
+> Examples:  
+>> [`members/migrations/0001_initial.py`](members/migrations/0001_initial.py)
+
+### Settings
+
+An important file where we configure our project.
+
+> `settings.py`  
+> Example: [`my_tennis_club/settings.py`](https://github.com/jobsonita/studies_django_w3tutorial/blob/c6e79a9ab13056a7ba9a340090b472d8509a6e63/my_tennis_club/settings.py)
 
 ## Checking Python installation
 
