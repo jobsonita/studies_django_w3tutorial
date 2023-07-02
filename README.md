@@ -2,6 +2,8 @@
 
 W3Schools Django Tutorial: https://www.w3schools.com/django/
 
+Note: all commmands bellow assume a Unix machine. For Windows or Mac, the commands might differ.
+
 ## Django structure:
 
 [MVT (Model View Template)](https://www.w3schools.com/django/django_intro.php)
@@ -41,3 +43,38 @@ python --version
 ```bash
 pip --version
 ```
+
+## Virtual Environment
+
+It is recommended to have a virtual environment for each Django project.
+
+To create a virtual environment, we use the following command:
+
+> python -m venv <folder_name>
+
+`<folder_name>` can be any name, in this project we'll use the name `venv`:
+
+```bash
+python -m venv venv
+```
+
+Its structure will look like the following:
+
+> venv
+> - bin  
+> - include
+> - lib
+> - pyvenv.cfg
+
+Once the virtual environment is created, we activate it:
+
+```bash
+source venv/bin/activate
+```
+
+> **Important**: you must activate the virtual environment every time you open the terminal to work on your project.
+
+Once activated, the terminal will look like the following:
+
+> (venv) @user ... $ 
+
