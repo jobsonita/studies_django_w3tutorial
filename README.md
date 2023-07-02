@@ -6,7 +6,7 @@ W3Schools Django Tutorial: https://www.w3schools.com/django/
 
 > Note: `django-admin` and `manage.py` can be used interchangeably in projects with a single app, but `django-admin` is preferred when working with multiple apps in the same project.
 
-## Django structure:
+## Django structure
 
 [MVT (Model View Template)](https://www.w3schools.com/django/django_intro.php)
 
@@ -15,7 +15,7 @@ W3Schools Django Tutorial: https://www.w3schools.com/django/
 Data from the database. Delivered as an Object Relational Mapping (ORM).
 
 > `models.py`  
-> Example: [`members/models.py`](https://github.com/jobsonita/studies_django_w3tutorial/blob/fda1b2dd75832d5979580d561541936885079b64/members/models.py)
+> Example: [`members/models.py`](https://github.com/jobsonita/studies_django_w3tutorial/blob/20d6cb7aee5691cf0adaa54df35a1717edde9177/members/models.py)
 
 ### View
 
@@ -165,7 +165,7 @@ It will create a `members` folder with the following structure:
 > - tests.py
 > - views.py
 
-## Creating migrations for new or modified models:
+## Creating migrations for new or modified models
 
 Whenever we change the `models.py` file of an app to include new models or change old ones, we must create migrations to tell the database to comply to those changes. We do that by running the following command:
 
