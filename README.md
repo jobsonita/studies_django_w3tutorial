@@ -335,6 +335,33 @@ Example: [members/templates/all_members.html](https://github.com/jobsonita/studi
 
 Example: [members/templates/all_members.html](https://github.com/jobsonita/studies_django_w3tutorial/blob/df7c73961e899aff3aec3418ed8da6c880063a7c/members/templates/all_members.html)
 
+### block and extends
+
+We can have a parent template with the general structure of the page, and children templates that extend that template and fill in the blocks set up by the parent:
+
+```django
+<!-- template.html (parent template) -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+  </body>
+</html>
+
+<!-- page.html (child template) -->
+{% extends 'template.html' %}
+
+{% block title %}Page title{% endblock %}
+
+{% block content %}
+  <h1>Content title</h1>
+  <p>Content of the page</p>
+{% endblock %}
+```
+
 ## Common problems
 
 When opening a Python file, you might notice Pylance complains about not being able to resolve imports. This is due to VSCode automatically picking the system's Python installation instead of the `venv` one. This must be fixed on each machine individually, since the venv structure varies with the OS.
