@@ -92,6 +92,29 @@ Check Django installation by running the command:
 django-admin --version
 ```
 
+## Creating a Django Project
+
+To create a Django project, run the command:
+
+> django-admin startproject <project_name>
+
+`<project_name>` can be any name, in this project we'll use the name `my_tennis_club`
+
+Also, we'll pass an additional argument, the current path, "`.`", to force Django to create the project at the root of the repository, since we won't have any other projects in it (it makes it easier to run `manage.py` commands, by not having to navigate inside an extra folder).
+
+```bash (venv)
+django-admin startproject my_tennis_club .
+```
+
+It will create a `manage.py` file on the root of the repository and a `my_tennis_club` project folder with the following structure:
+
+> my_tennis_club
+> - \_\_init\_\_.py
+> - asgi.py
+> - settings.py
+> - urls.py
+> - wsgi.py
+
 ## Sharing current project with other developers
 
 At any moment, run the following command to generate a list of requirements to be installed:
@@ -113,3 +136,17 @@ If the project has any migrations, make sure to run them to restore the database
 ```bash (venv)
 python manage.py migrate
 ```
+
+## Running the project
+
+To run the project, use the following command:
+
+```bash (venv)
+./manage.py runserver
+```
+
+## Common problems
+
+When opening a Python file, you might notice Pylance complains about not being able to resolve imports. This is due to VSCode automatically picking the system's Python installation instead of the `venv` one. This must be fixed on each machine individually, since the venv structure varies with the OS.
+
+Refer to https://code.visualstudio.com/docs/python/environments#_working-with-python-interpreters to fix that problem.

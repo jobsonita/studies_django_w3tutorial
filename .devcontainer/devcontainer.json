@@ -37,6 +37,7 @@
           "dotenv": "tune"
         },
         "workbench.iconTheme": "material-icon-theme",
+        "python.defaultInterpreterPath": "./venv/bin/python",
         "[python]": {
           "editor.rulers": [79],
           "editor.tabSize": 4,
