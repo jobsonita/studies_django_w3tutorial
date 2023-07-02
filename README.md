@@ -378,6 +378,18 @@ To create the superuser in order to access Django Admin interface (`/admin` endp
 ./manage.py createsuperuser
 ```
 
+### Model registration
+
+In order to access our models in Django Admin interface, we need to register them at `admin.py`:
+
+```python
+from django.contrib import admin
+from .models import Member
+
+# Register your models here.
+admin.site.register(Member)
+```
+
 ## Common problems
 
 ### Pylance and Venv
