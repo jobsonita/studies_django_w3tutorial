@@ -62,6 +62,7 @@
         "eamodio.gitlens",
         "ms-python.python",
         "ms-python.vscode-pylance",
+        "ms-python.isort",
         "KevinRose.vsc-python-indent",
         "batisteo.vscode-django",
         "bigonesystems.django",
