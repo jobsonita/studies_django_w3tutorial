@@ -280,7 +280,7 @@ def members(request):
     return HttpResponse(template.render(context, request))
 ```
 
-Example: [members/views.py](members/views.py)
+Example: [members/views.py](https://github.com/jobsonita/studies_django_w3tutorial/blob/df7c73961e899aff3aec3418ed8da6c880063a7c/members/views.py)
 
 ### data display
 
@@ -288,7 +288,7 @@ Example: [members/views.py](members/views.py)
 <p>{{ variable_to_be_displayed }}</p>
 ```
 
-Example: [members/templates/all_members.html](members/templates/all_members.html)
+Example: [members/templates/all_members.html](https://github.com/jobsonita/studies_django_w3tutorial/blob/df7c73961e899aff3aec3418ed8da6c880063a7c/members/templates/all_members.html)
 
 ### for loop
 
@@ -298,7 +298,7 @@ Example: [members/templates/all_members.html](members/templates/all_members.html
 {% endfor %}
 ```
 
-Example: [members/templates/all_members.html](members/templates/all_members.html)
+Example: [members/templates/all_members.html](https://github.com/jobsonita/studies_django_w3tutorial/blob/df7c73961e899aff3aec3418ed8da6c880063a7c/members/templates/all_members.html)
 
 ## Common problems
 
