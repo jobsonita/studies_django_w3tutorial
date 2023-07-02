@@ -325,6 +325,14 @@ Example: [members/views.py](https://github.com/jobsonita/studies_django_w3tutori
 
 Example: [members/templates/all_members.html](https://github.com/jobsonita/studies_django_w3tutorial/blob/df7c73961e899aff3aec3418ed8da6c880063a7c/members/templates/all_members.html)
 
+### with variable
+
+```django
+{% with firstname="Tobias" %}
+  <h1>Hello {{ firstname }}, how are you?</h1>
+{% endwith %}
+```
+
 ### for loop
 
 ```django
