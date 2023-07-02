@@ -380,6 +380,17 @@ To create the superuser in order to access Django Admin interface (`/admin` endp
 
 ## Common problems
 
+### Pylance and Venv
+
 When opening a Python file, you might notice Pylance complains about not being able to resolve imports. This is due to VSCode automatically picking the system's Python installation instead of the `venv` one. This must be fixed on each machine individually, since the venv structure varies with the OS.
 
 Refer to https://code.visualstudio.com/docs/python/environments#_working-with-python-interpreters to fix that problem.
+
+### Django Admin, Codespaces and CSRF
+
+When accessing the Django Admin interface, if it gives an error about CSRF, consider adding this line to the `settings.py` file:
+
+```python
+if 'CODESPACE_NAME' in os.environ:
+    CSRF_TRUSTED_ORIGINS = [f'https://{os.getenv("CODESPACE_NAME")}-8000.{os.getenv("GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN")}']
+```
