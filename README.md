@@ -91,3 +91,25 @@ Check Django installation by running the command:
 ```bash (venv)
 django-admin --version
 ```
+
+## Sharing current project with other developers
+
+At any moment, run the following command to generate a list of requirements to be installed:
+
+```bash (venv)
+pip freeze > requirements.txt
+```
+
+On another machine, restore the project by running the following commands:
+
+```bash (venv)
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+If the project has any migrations, make sure to run them to restore the database:
+
+```bash (venv)
+python manage.py migrate
+```
