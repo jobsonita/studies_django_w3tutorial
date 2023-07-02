@@ -343,6 +343,18 @@ Example: [members/templates/all_members.html](https://github.com/jobsonita/studi
 
 Example: [members/templates/all_members.html](https://github.com/jobsonita/studies_django_w3tutorial/blob/df7c73961e899aff3aec3418ed8da6c880063a7c/members/templates/all_members.html)
 
+### if elif else
+
+```django
+{% if greeting == 1 %}
+  <h1>Hello</h1>
+{% elif greeting == 2 %}
+  <h1>Welcome</h1>
+{% else %}
+  <h1>Goodbye</h1>
+{% endif %} 
+```
+
 ### block and extends
 
 We can have a parent template with the general structure of the page, and children templates that extend that template and fill in the blocks set up by the parent:
