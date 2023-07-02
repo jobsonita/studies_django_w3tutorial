@@ -159,6 +159,38 @@ Finally, we apply our migrations through:
 ./manage.py migrate
 ```
 
+## Interactive shell
+
+We are able to interact with our project through the interactive shell by running:
+
+```bash (venv)
+./manage.py shell
+```
+
+We can import our models and interact with them like so:
+
+```python shell
+from members.models import Member
+Member.objects.all().values()
+# <QuerySet []>
+member = Member(firstname='Emil', lastname='Refsnes')
+member.save()
+Member.objects.all().values()
+# <QuerySet [{'id': 1, 'firstname': 'Emil', 'lastname': 'Refsnes'}]>
+```
+
+Assuming a `fixtures` folder exists in `members` app (create it if it doesn't), we can back up the data to a file with the following command:
+
+```bash (venv)
+./manage.py dumpdata members -o members/fixtures/members.json
+```
+
+This way, we can restore the database on a new machine by running:
+
+```bash (venv)
+./manage.py loaddata members/fixtures/members.json --app members
+```
+
 ## Sharing current project with other developers
 
 At any moment, run the following command to generate a list of requirements to be installed:
