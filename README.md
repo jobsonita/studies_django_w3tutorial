@@ -78,3 +78,16 @@ Once activated, the terminal will look like the following:
 
 > (venv) @user ... $ 
 
+## Installing Django
+
+Install Django with the following command:
+
+```bash (venv)
+python -m pip install Django
+```
+
+Check Django installation by running the command:
+
+```bash (venv)
+django-admin --version
+```
