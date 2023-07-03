@@ -283,6 +283,20 @@ Other lookup keywords:
 
 https://www.w3schools.com/django/django_queryset_filter.php
 
+### order_by
+
+```python
+def testing(request):
+    # ascending order
+    mymembers = Member.objects.all().order_by('firstname').values()
+    ...
+    # descending order
+    mymembers = Member.objects.all().order_by('-firstname').values()
+    ...
+    # descending order
+    mymembers = Member.objects.all().order_by('firstname', '-lastname').values()
+```
+
 ## Sharing current project with other developers
 
 At any moment, run the following command to generate a list of requirements to be installed:

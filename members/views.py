@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.template import loader
+
 from .models import Member
 
 
@@ -27,7 +28,7 @@ def main(request):
 
 
 def testing(request):
-    mymembers = Member.objects.all().values()
+    mymembers = Member.objects.all().order_by('firstname').values()
     template = loader.get_template('testing.html')
     context = {
         'fruits': ['Apple', 'Banana', 'Cherry'],
