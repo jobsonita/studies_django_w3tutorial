@@ -223,6 +223,66 @@ member = Member.objects.all()[5]
 member.delete()
 ```
 
+## QuerySet
+
+### \<Model\>.objects.all()
+
+Retrieves all records of a model as a QuerySet.
+
+### \<Model\>.objects.all().values()
+
+Retrieves the objects as Python dictionaries.
+
+### \<Model\>.objects.values_list(fields)
+
+Retrieves the objects with only the specified columns (fields) filled.
+
+```python
+def testing(request):
+    mymembers = Member.objects.values_list('firstname', 'lastname')
+    ...
+```
+
+### \<Model\>.objects.filter(rules).values()
+
+Retrieves only the objects which fulfill the specified rules.
+
+```python
+def testing(request):
+    mymembers = Member.objects.filter(firstname='Emil', lastname='Refsnes').values()
+    ...
+```
+
+### Union of queries
+
+```python
+def testing(request):
+    mymembers = Member.objects.filter(firstname='Emil').values() | Member.objects.filter(firstname='Tobias').values()
+    ...
+```
+
+Alternative using `django.db.models.Q`:
+
+```python
+from django.db.models import Q
+
+def testing(request):
+    mymembers = Member.objects.filter(Q(firstname='Emil') | Q(firstname='Tobias')).values()
+    ...
+```
+
+### Field Lookups
+
+```python
+def testing(request):
+    mymembers = Member.objects.filter(firstname__startswith='L').values()
+    ...
+```
+
+Other lookup keywords:
+
+https://www.w3schools.com/django/django_queryset_filter.php
+
 ## Sharing current project with other developers
 
 At any moment, run the following command to generate a list of requirements to be installed:
