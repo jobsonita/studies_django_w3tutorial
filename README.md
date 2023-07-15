@@ -1,3 +1,5 @@
+[Leia este arquivo em Português](./.github/lang/README.pt-BR.md)
+
 # studies_django_w3tutorial
 
 W3Schools Django Tutorial: https://www.w3schools.com/django/
@@ -293,7 +295,7 @@ def testing(request):
     # descending order
     mymembers = Member.objects.all().order_by('-firstname').values()
     ...
-    # descending order
+    # order by multiple fieds
     mymembers = Member.objects.all().order_by('firstname', '-lastname').values()
 ```
 
